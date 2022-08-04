@@ -1,0 +1,7 @@
+[github-mail-reader]
+server = "example.com"
+starttls = false
+login = "john.doe"
+password = "secret!"
+folder = "GitHub"
+gh_token = "ghp_abc123"
