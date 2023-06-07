@@ -64,3 +64,7 @@ with MailBox(config["server"]).login(
             subject = shorten(msg.subject, 80, placeholder="…")
             print(f"mark message {subject!r} as seen because {pr} is {state}")
             box.flag([msg.uid], MailMessageFlags.SEEN, True)
+
+    flagged = count - len(box.numbers(criteria))
+    pc = int(100 * flagged / count)
+    print(f"{flagged} emails marked as read ({pc}%)")
